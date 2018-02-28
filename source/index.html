@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Тестовое/idaprojects</title>
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="/fonts/opensans.woff2" as="font">
+    <link rel="preload" href="/fonts/opensansbold.woff2" as="font">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--personal-account">
+              <a class="main-nav__link  main-nav__link--personal-account" href="#">
+                Личный кабинет
+              </a>
+            </li>
+            <li class="main-nav__item main-nav__item--active">
+              <a class="main-nav__link  main-nav__link--payments" href="#">
+                Платежи
+              </a>
+            </li>
+            <li class="main-nav__item  main-nav__item--history">
+              <a class="main-nav__link  main-nav__link--history" href="#">
+                История платежей
+              </a>
+            </li>
+            <li class="main-nav__item  main-nav__item--settings">
+              <a class="main-nav__link  main-nav__link--settings" href="#">
+                Настройки
+              </a>
+            </li>
+            <li class="main-nav__item  main-nav__item--exit">
+              <a class="main-nav__link  main-nav__link--exit" href="#">
+                Выйти
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__wrapper">
+        <section class="payment">
+          <p class="payment__title">Информация о оплате:</p>
+          <ul class="payment__parametres">
+            <li class="payment__item payment__item--number">
+              <span>Номер счета:</span>87123658716587
+            </li>
+            <li class="payment__item payment__item--summa">
+              <span>Сумма платежа:</span>100 руб.
+            </li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2 class="data__title">Данные банковской карты</h2>
+            <form class="form" method="post">
+              <fieldset class="form__fieldset">
+                <span class="form__fieldset-title">Номер карты</span>
+                <ul class="form__list">
+                  <li class="form__list-item">
+                    <input type="text" name="number" placeholder="1234">
+                    <input type="text" name="number">
+                    <input type="text" name="number">
+                    <input type="text" name="number">
+                  </li>
+                </ul>
+                <span class="form__fieldset-title">Срок действия</span>
+                <ul class="form__list">
+                  <li class="form__list-item">
+                    <input class="month" type="text" name="number">
+                    <input type="year" name="number">
+                  </li>
+                </ul>
+                <input class="owner" type="text" name="owner" placeholder="Держатель карты">
+              </fieldset>
+              <fieldset class="form__fieldset form__fieldset--cvv">
+                <ul class="form__list">
+                  <li class="form__list-item form__list-item--cvv">
+                    <label for="cvv">Код CVV2 / CVC2</label>
+                      <input type="text" id="cvv" name="cvv">
+                  </li>
+                </ul>
+              </fieldset>
+            <input class="form__btn" type="submit" value="Оплатить">
+            </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <p class="page-footer__text">
+          Исходя из астатической системы координат Булгак ова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.
+        </p>
+        <p class="page-footer__text">
+          Выклинивание абсолютно аккумулирует твердый pад иотелескоп Максвелла.
+        </p>
+        <p class="page-footer__text">
+          Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.
+        </p>
+        <p class="page-footer__text page-footer__text--last">
+          Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+.page-header {
+  font-size: 18px;
+}
+
+.page-header__wrapper {
+  .wrapper();
+}
+
+.main-nav {
+  background-color: #1f2229;
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav__item {
+  padding: 25px 0 25px 45px;
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  &--active {
+    background-color: #2a2d37;
+
+    a {
+      color: #808592;
+    }
+  }
+
+  &--settings,
+  &--exit {
+    background-color: #191c24;
+    font-weight: 600;
+  }
+
+  &--exit {
+    a {
+      color: #808592;
+    }
+  }
+}
