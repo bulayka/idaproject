@@ -176,17 +176,18 @@ section {
   display: flex;
   margin-top: 10px;
 }
-.form__list-item input {
+.form__list-item input,
+.form__list-item select {
   text-align: center;
   width: 30px;
   padding: 5px;
   margin-right: 5px;
 }
-.form__list-item .form__month {
-  width: 40px;
+.form__list-item .form__input--month {
+  width: 50px;
 }
-.form__list-item .form__year {
-  width: 60px;
+.form__list-item .form__input--year {
+  width: 65px;
 }
 .form__list-item--cvv {
   position: relative;
@@ -210,7 +211,7 @@ section {
   top: 18px;
   right: 2px;
 }
-.form__owner {
+.form__input--owner {
   width: 270px;
   margin-top: 10px;
   padding: 5px;
@@ -224,6 +225,9 @@ section {
   border: none;
   border-radius: 20px;
   padding: 10px;
+}
+.form__error {
+  outline: 1px solid red;
 }
 @media (min-width: 1000px) {
   .card {
@@ -268,10 +272,10 @@ section {
     padding-bottom: 10px;
     margin-right: 10px;
   }
-  .form__list-item .form__month {
+  .form__list-item .form__input--month {
     width: 55px;
   }
-  .form__list-item .form__year {
+  .form__list-item .form__input--year {
     width: 75px;
   }
   .form__list-item--cvv {
@@ -290,7 +294,7 @@ section {
   .form__list-item--duration {
     margin-bottom: 5px;
   }
-  .form__owner {
+  .form__input--owner {
     width: 300px;
     font-size: 16px;
     line-height: 21px;

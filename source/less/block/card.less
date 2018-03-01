@@ -28,19 +28,24 @@
   display: flex;
   margin-top: 10px;
 
-  input {
+  input,
+  select {
     text-align: center;
     width: 30px;
     padding: 5px;
     margin-right: 5px;
   }
 
-  .form__month {
-    width: 40px;
+  .form__input {
+    &--month {
+      width: 50px;
+    }
   }
 
-  .form__year {
-    width: 60px;
+  .form__input {
+    &--year {
+      width: 65px;
+    }
   }
 
   &--cvv {
@@ -64,10 +69,13 @@
   }
 }
 
-.form__owner {
-  width: 270px;
-  margin-top: 10px;
-  padding: 5px;
+.form__input {
+  &--owner {
+    width: 270px;
+    margin-top: 10px;
+    padding: 5px;
+    text-transform: uppercase;
+  }
 }
 
 .form__btn {
@@ -79,6 +87,10 @@
   border: none;
   border-radius: 20px;
   padding: 10px;
+}
+
+.form__error {
+  outline: 1px solid red;
 }
 
 @media (min-width: 1000px) {
@@ -129,12 +141,16 @@
       margin-right: 10px;
     }
 
-    .form__month {
-      width: 55px;
+    .form__input {
+      &--month {
+        width: 55px;
+      }
     }
 
-    .form__year {
-      width: 75px;
+    .form__input {
+      &--year {
+        width: 75px;
+      }
     }
 
     &--cvv {
@@ -158,11 +174,13 @@
     }
   }
 
-  .form__owner {
-    width: 300px;
-    font-size: 16px;
-    line-height: 21px;
-    padding: 10px;
+  .form__input {
+    &--owner {
+      width: 300px;
+      font-size: 16px;
+      line-height: 21px;
+      padding: 10px;
+    }
   }
 
   .form__btn {
