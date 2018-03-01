@@ -5,6 +5,7 @@
 .form {
   display: flex;
   flex-direction: column;
+  padding-bottom: 45px;
 }
 
 .form__list {
@@ -23,9 +24,6 @@
   }
 }
 
-.form__fieldset-title {
-}
-
 .form__list-item {
   display: flex;
   margin-top: 10px;
@@ -37,7 +35,16 @@
     margin-right: 5px;
   }
 
+  .form__month {
+    width: 40px;
+  }
+
+  .form__year {
+    width: 60px;
+  }
+
   &--cvv {
+    position: relative;
     flex-direction: column;
     align-items: flex-end;
     margin-right: 10px;
@@ -48,19 +55,119 @@
       width: 110px;
       margin: 0;
     }
+
+    svg {
+      position: absolute;
+      top: 18px;
+      right: 2px;
+    }
   }
 }
 
-.owner {
+.form__owner {
   width: 270px;
+  margin-top: 10px;
   padding: 5px;
 }
 
 .form__btn {
+  font-size: 14px;
+  line-height: 18px;
   text-align: center;
   background-color: #0056b7;
   color: #ffffff;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 10px;
+}
+
+@media (min-width: 1000px) {
+  .card {
+    width: 639px;
+  }
+
+  .card__title {
+    font-size: 23px;
+    font-weight: 600;
+    margin-top: 40px;
+  }
+
+  .form {
+    position: relative;
+  }
+
+  .form__fieldset {
+    padding-top: 20px;
+
+    &--card {
+      width: 325px;
+    }
+
+    &--card {
+      z-index: 100;
+      background-color: #f7f8f8;
+    }
+
+    &--cvv {
+      width: 345px;
+      position: absolute;
+      top: 20px;
+      left: 190px;
+      background-image: linear-gradient(#f7f8f8 12%, #e4e9ee 12%, #e4e9ee 30%, #f7f8f8 30%, #f7f8f8 100%);
+    }
+  }
+
+  .form__list-item {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 15px;
+
+    input {
+      width: 50px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-right: 10px;
+    }
+
+    .form__month {
+      width: 55px;
+    }
+
+    .form__year {
+      width: 75px;
+    }
+
+    &--cvv {
+      margin-top: 60px;
+      margin-bottom: 80px;
+
+      input {
+        width: 120px;
+        margin-top: 10px;
+        margin-right: 0;
+      }
+
+      svg {
+        top: 33px;
+        right: 15px;
+      }
+    }
+
+    &--duration {
+      margin-bottom: 5px;
+    }
+  }
+
+  .form__owner {
+    width: 300px;
+    font-size: 16px;
+    line-height: 21px;
+    padding: 10px;
+  }
+
+  .form__btn {
+    width: 130px;
+    margin-top: 40px;
+    margin-left: 15px;
+  }
 }

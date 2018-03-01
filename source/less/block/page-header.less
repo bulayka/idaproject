@@ -1,5 +1,7 @@
 .page-header {
   font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
 }
 
 .page-header__wrapper {
@@ -37,12 +39,21 @@
   &--settings,
   &--exit {
     background-color: #191c24;
-    font-weight: 600;
   }
 
   &--exit {
     a {
       color: #808592;
     }
+  }
+}
+
+@media (min-width: 1000px) {
+  .main-nav {
+    width: 320px;
+  }
+
+  .main-nav__item {
+    padding-left: 30px;
   }
 }

@@ -1,5 +1,6 @@
 .page-footer {
   color: #7f8591;
+  margin-top: -16px;
 }
 
 .page-footer__wrapper {
@@ -13,5 +14,22 @@
 
   &--last {
     padding-bottom: 20px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .page-footer {
+    margin-left: auto;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .page-footer__wrapper {
+    width: 620px;
+    padding: 25px;
+  }
+
+  .page-footer__text {
+    padding: 0;
   }
 }

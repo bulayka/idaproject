@@ -23,6 +23,16 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+@media (min-width: 1000px) {
+  body {
+    width: 1000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
@@ -37,6 +47,8 @@ input[type="radio"].visually-hidden {
 }
 .page-header {
   font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
 }
 .page-header__wrapper {
   width: 320px;
@@ -73,10 +85,24 @@ input[type="radio"].visually-hidden {
 .main-nav__item--settings,
 .main-nav__item--exit {
   background-color: #191c24;
-  font-weight: 600;
 }
 .main-nav__item--exit a {
   color: #808592;
+}
+@media (min-width: 1000px) {
+  .main-nav {
+    width: 320px;
+  }
+  .main-nav__item {
+    padding-left: 30px;
+  }
+}
+.main {
+  margin: 0;
+  padding: 0;
+}
+section {
+  margin-top: -15px;
 }
 .main__wrapper {
   width: 320px;
@@ -85,7 +111,10 @@ input[type="radio"].visually-hidden {
 }
 .payment {
   font-family: "Arial", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
+}
+.payment__title {
+  padding-top: 45px;
 }
 .payment__parametres {
   display: -webkit-box;
@@ -108,6 +137,12 @@ input[type="radio"].visually-hidden {
 .payment__item span {
   width: 150px;
 }
+@media (min-width: 1000px) {
+  .main__wrapper {
+    width: 620px;
+    padding: 0 30px;
+  }
+}
 .card {
   font-size: 15px;
 }
@@ -119,6 +154,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-bottom: 45px;
 }
 .form__list {
   list-style: none;
@@ -146,7 +182,14 @@ input[type="radio"].visually-hidden {
   padding: 5px;
   margin-right: 5px;
 }
+.form__list-item .form__month {
+  width: 40px;
+}
+.form__list-item .form__year {
+  width: 60px;
+}
 .form__list-item--cvv {
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -162,20 +205,106 @@ input[type="radio"].visually-hidden {
   width: 110px;
   margin: 0;
 }
-.owner {
+.form__list-item--cvv svg {
+  position: absolute;
+  top: 18px;
+  right: 2px;
+}
+.form__owner {
   width: 270px;
+  margin-top: 10px;
   padding: 5px;
 }
 .form__btn {
+  font-size: 14px;
+  line-height: 18px;
   text-align: center;
   background-color: #0056b7;
   color: #ffffff;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 10px;
+}
+@media (min-width: 1000px) {
+  .card {
+    width: 639px;
+  }
+  .card__title {
+    font-size: 23px;
+    font-weight: 600;
+    margin-top: 40px;
+  }
+  .form {
+    position: relative;
+  }
+  .form__fieldset {
+    padding-top: 20px;
+  }
+  .form__fieldset--card {
+    width: 325px;
+  }
+  .form__fieldset--card {
+    z-index: 100;
+    background-color: #f7f8f8;
+  }
+  .form__fieldset--cvv {
+    width: 345px;
+    position: absolute;
+    top: 20px;
+    left: 190px;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(12%, #f7f8f8), color-stop(12%, #e4e9ee), color-stop(30%, #e4e9ee), color-stop(30%, #f7f8f8), to(#f7f8f8));
+    background-image: linear-gradient(#f7f8f8 12%, #e4e9ee 12%, #e4e9ee 30%, #f7f8f8 30%, #f7f8f8 100%);
+  }
+  .form__list-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  .form__list-item input {
+    width: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 10px;
+  }
+  .form__list-item .form__month {
+    width: 55px;
+  }
+  .form__list-item .form__year {
+    width: 75px;
+  }
+  .form__list-item--cvv {
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
+  .form__list-item--cvv input {
+    width: 120px;
+    margin-top: 10px;
+    margin-right: 0;
+  }
+  .form__list-item--cvv svg {
+    top: 33px;
+    right: 15px;
+  }
+  .form__list-item--duration {
+    margin-bottom: 5px;
+  }
+  .form__owner {
+    width: 300px;
+    font-size: 16px;
+    line-height: 21px;
+    padding: 10px;
+  }
+  .form__btn {
+    width: 130px;
+    margin-top: 40px;
+    margin-left: 15px;
+  }
 }
 .page-footer {
   color: #7f8591;
+  margin-top: -16px;
 }
 .page-footer__wrapper {
   width: 320px;
@@ -188,4 +317,18 @@ input[type="radio"].visually-hidden {
 }
 .page-footer__text--last {
   padding-bottom: 20px;
+}
+@media (min-width: 1000px) {
+  .page-footer {
+    margin-left: auto;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .page-footer__wrapper {
+    width: 620px;
+    padding: 25px;
+  }
+  .page-footer__text {
+    padding: 0;
+  }
 }

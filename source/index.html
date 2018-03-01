@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Тестовое/idaprojects</title>
-    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="css/style.css" as="style">
     <link rel="preload" href="/fonts/opensans.woff2" as="font">
     <link rel="preload" href="/fonts/opensansbold.woff2" as="font">
     <link href="css/style.css" rel="stylesheet">
@@ -60,36 +60,65 @@
         </section>
 
         <section class="card">
-          <h2 class="data__title">Данные банковской карты</h2>
+          <h2 class="card__title">Данные банковской карты</h2>
             <form class="form" method="post">
-              <fieldset class="form__fieldset">
+              <fieldset class="form__fieldset form__fieldset--card">
                 <span class="form__fieldset-title">Номер карты</span>
                 <ul class="form__list">
                   <li class="form__list-item">
-                    <input type="text" name="number" placeholder="1234">
-                    <input type="text" name="number">
-                    <input type="text" name="number">
-                    <input type="text" name="number">
+                    <input type="text" name="number" pattern="[0-9]{4}" required>
+                    <input type="text" name="number" pattern="[0-9]{4}" required>
+                    <input type="text" name="number" pattern="[0-9]{4}" required>
+                    <input type="text" name="number" pattern="[0-9]{4}" required>
                   </li>
                 </ul>
                 <span class="form__fieldset-title">Срок действия</span>
                 <ul class="form__list">
-                  <li class="form__list-item">
-                    <input class="month" type="text" name="number">
-                    <input type="year" name="number">
+                  <li class="form__list-item form__list-item--duration">
+                    <input class="form__month" list="month" type="text" name="number" required>
+                    <datalist id="month">
+                      <option value="01">
+                      <option value="02">
+                      <option value="03">
+                      <option value="04">
+                      <option value="05">
+                      <option value="06">
+                      <option value="07">
+                      <option value="08">
+                      <option value="09">
+                      <option value="10">
+                      <option value="11">
+                      <option value="12">
+                    </datalist>
+                    <input class="form__year" list="year" type="text" name="number" required>
+                    <datalist id="year">
+                      <option value="2018">
+                      <option value="2019">
+                      <option value="2020">
+                    </datalist>
                   </li>
                 </ul>
-                <input class="owner" type="text" name="owner" placeholder="Держатель карты">
+                <input class="form__owner" type="text" name="owner" placeholder="Держатель карты" pattern="[a-z]{4-100}" required>
               </fieldset>
               <fieldset class="form__fieldset form__fieldset--cvv">
                 <ul class="form__list">
                   <li class="form__list-item form__list-item--cvv">
                     <label for="cvv">Код CVV2 / CVC2</label>
-                      <input type="text" id="cvv" name="cvv">
+                      <input type="text" id="cvv" name="cvv" pattern="[0-9]{3}" required>
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="26" viewBox="0 0 26 26">
+                        <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+                          <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+                          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                          <rdf:Description rdf:about=""/>
+                        </rdf:RDF>
+                      </x:xmpmeta>
+                      <?xpacket end="w"?></metadata>
+                      <image id="подсказка" width="26" height="26" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABX1BMVEW+xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs++xs8AAACUL6EOAAAAc3RSTlMADy4zKAYmjNnw0czX+cZxEZxzBDmO7ogIeO1jAg79UIYeRvFfdtIQN/NBMCBVqplmRLurbiTbdyK+1CsL9AE6xR/gLRbpId77B0u0v0CFemmWCvUbWKd7ndw+/pKPPXlZ9pUdoC9P2GdCKYqwR73f1nUjXWxdLAAAAAFiS0dEdN9tqG0AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiAhwKJRl2WFafAAABO0lEQVQoz2NgQABGJmYWVgZMwMbOwcnFzcPLxy+AKsEsyCHEBmIIi4iKiUsgyUhKScvAObKicvJwjgKXIooZSsoqUJaqmjqaxRqaWmBaW0wHw1G6emBK3wDKN9Qz0tOFso1NgISpmTCEZ1BsZG5ULA7hsMgB3SVuDuEIiIEM0S+2gHAtgbZZWUPYFvqGIEOLDSFcflEGG1s7ZPv1xaCBYe/AwMKDIlMMc5OjE4OzGooemAyDiyuDmzuSb+B6QA5nEPbwhHPNixHKvLwZGHx84VwLQ4SUnz8DQ0AgnGtoDmfamZkyMAQFh2AxMDQMRIZHYIQug2dkFFhvtDyGVEwsNOaC49Bk4gOhQc6QkKiCYlpSYDIiVlO8U+FuS0uPRQnWjGg+80xTnay07MicXDTj7UTE88zyC3IKi2AiAFexK44wvNZGAAAAAElFTkSuQmCC"/>
+                    </svg>
                   </li>
                 </ul>
               </fieldset>
-            <input class="form__btn" type="submit" value="Оплатить">
+              <input class="form__btn" type="submit" value="Оплатить">
             </form>
         </section>
       </div>

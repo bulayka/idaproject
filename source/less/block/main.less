@@ -1,5 +1,10 @@
 .main {
+  margin: 0;
+  padding: 0;
+}
 
+section {
+  margin-top: -15px;
 }
 
 .main__wrapper {
@@ -9,7 +14,11 @@
 
 .payment {
   font-family: "Arial", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
+}
+
+.payment__title {
+  padding-top: 45px;
 }
 
 .payment__parametres {
@@ -25,5 +34,12 @@
   margin-bottom: 10px;
   span {
     width: 150px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .main__wrapper {
+    width: 620px;
+    padding: 0 30px;
   }
 }
