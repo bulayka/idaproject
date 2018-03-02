@@ -1,14 +1,12 @@
-var form = document.querySelector(".form");
-var owner = form.querySelector("[name=owner]");
-var fields = form.querySelectorAll(".form__input");
-
-form.addEventListener("submit", function (evt) {
-  evt.preventDefault();
-  for (var i = 0; i < fields.length; i++) {
-    if (!fields[i].value) {
-      fields[i].classList.add("form__error");
-    } else {
-      fields[i].classList.remove("form__error");
+var form = document.querySelector(".form"),
+    owner = form.querySelector("[name=owner]"),
+    fields = form.querySelectorAll(".form__input");
+form.noValidate = true; // отключаем браузерную валидацию, иначе событие submit не сработает
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    for (var r = 0; r < fields.length; r++) {
+     // checkValidity() -проверяет, прошёл ли элемент проверку по указанному в параметрах шаблону
+     // если проверка не пройдена или значение пустое, то вешаем класс ошибки.
+     (!fields[r].checkValidity() || fields[r].value === '') ? fields[r].classList.add("form__error") : fields[r].classList.remove("form__error")
     }
-  }
 });
