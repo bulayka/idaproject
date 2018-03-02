@@ -24,16 +24,27 @@
   }
 }
 
+.form__fieldset-title {
+  color: #535864;
+}
+
 .form__list-item {
   display: flex;
   margin-top: 10px;
 
   input,
   select {
+    font-size: 16px;
+    line-height: 21px;
     text-align: center;
     width: 30px;
     padding: 5px;
     margin-right: 5px;
+    border: 1px solid #e4e9ee;
+  }
+
+  label {
+    color: #535864;
   }
 
   .form__input {
@@ -63,7 +74,7 @@
 
     svg {
       position: absolute;
-      top: 18px;
+      top: 21px;
       right: 2px;
     }
   }
@@ -72,9 +83,9 @@
 .form__input {
   &--owner {
     width: 270px;
-    margin-top: 10px;
+    margin-top: 5px;
     padding: 5px;
-    text-transform: uppercase;
+    border: 1px solid #e4e9ee;
   }
 }
 
@@ -99,9 +110,10 @@
   }
 
   .card__title {
-    font-size: 23px;
+    font-size: 22px;
     font-weight: 600;
-    margin-top: 40px;
+    margin-top: 30px;
+    margin-bottom: 22px;
   }
 
   .form {
@@ -125,31 +137,39 @@
       position: absolute;
       top: 20px;
       left: 190px;
-      background-image: linear-gradient(#f7f8f8 12%, #e4e9ee 12%, #e4e9ee 30%, #f7f8f8 30%, #f7f8f8 100%);
+      background-image: linear-gradient(#f7f8f8 10%, #e4e9ee 10%, #e4e9ee 28%, #f7f8f8 28%, #f7f8f8 100%);
     }
   }
 
   .form__list-item {
     display: flex;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin-top: 6px;
+    margin-bottom: 12px;
 
     input {
       width: 50px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      margin-right: 10px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      margin-right: 12px;
+    }
+
+    label {
+      font-size: 16px;
+      line-height: 21px;
+      margin-right: 5px;
     }
 
     .form__input {
       &--month {
-        width: 55px;
+        width: 70px;
+        padding: 11px;
+        margin-right: 10px;
       }
     }
 
     .form__input {
       &--year {
-        width: 75px;
+        width: 85px;
       }
     }
 
@@ -158,14 +178,14 @@
       margin-bottom: 80px;
 
       input {
-        width: 120px;
-        margin-top: 10px;
-        margin-right: 0;
+        width: 125px;
+        margin-top: 5px;
+        margin-right: -10px;
       }
 
       svg {
-        top: 33px;
-        right: 15px;
+        top: 35px;
+        right: 0px;
       }
     }
 
@@ -176,7 +196,7 @@
 
   .form__input {
     &--owner {
-      width: 300px;
+      width: 295px;
       font-size: 16px;
       line-height: 21px;
       padding: 10px;
@@ -185,7 +205,7 @@
 
   .form__btn {
     width: 130px;
-    margin-top: 40px;
+    margin-top: 45px;
     margin-left: 15px;
   }
 }
